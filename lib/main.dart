@@ -26,14 +26,41 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Hi Bar'),
-        ),
-        body: const Center(
-          child: Text('HI world'),
-        ),
-      ),
-    );
+        home: Scaffold(
+      backgroundColor: Colors.black,
+      body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 80,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      const Text(
+                        "Hey 1234",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 38,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "Welcome back",
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.8),
+                          fontSize: 22,
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              )
+            ],
+          )),
+    ));
   }
 }
