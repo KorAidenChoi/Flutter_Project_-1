@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
+import 'widgets/button.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
       backgroundColor: Colors.black,
       body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -67,22 +70,18 @@ class App extends StatelessWidget {
                 height: 20,
               ),
               Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(45)),
-                    child: const Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 15, horizontal: 40),
-                      child: Text(
-                        "Transfer",
-                        style: TextStyle(
-                          fontSize: 22,
-                        ),
-                      ),
-                    ),
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Button(
+                    text: "Transfer",
+                    bgColor: Color(0xFFF1B33B),
+                    textColor: Colors.black,
                   ),
+                  Button(
+                    text: "Request",
+                    bgColor: Color(0xFF1F2123),
+                    textColor: Colors.white,
+                  )
                 ],
               ),
             ],
@@ -90,42 +89,3 @@ class App extends StatelessWidget {
     ));
   }
 }
-  // @override
-  // Widget build(BuildContext context) {
-  //   return MaterialApp(
-  //       home: Scaffold(
-  //     appBar: AppBar(
-  //       title: const Text(
-  //         "Shop",
-  //         style: TextStyle(fontSize: 40),
-  //       ),
-  //       backgroundColor: Colors.black,
-  //       centerTitle: true,
-  //     ),
-  //     body: Padding(
-  //       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 80),
-  //       child: Column(
-  //         children: [
-  //           Row(
-  //             children: [
-  //               Column(
-  //                 children: [
-  //                   Container(
-  //                     padding: const EdgeInsets.all(20),
-  //                     decoration: BoxDecoration(
-  //                         border: Border.all(
-  //                             color: const Color.fromARGB(255, 51, 112, 255))),
-  //                     child: const Text(
-  //                       'Mangoes',
-  //                       style: TextStyle(fontSize: 25),
-  //                     ),
-  //                   )
-  //                 ],
-  //               ),
-  //             ],
-  //           ),
-  //         ],
-  //       ),
-  //     ),
-  //   ));
-
