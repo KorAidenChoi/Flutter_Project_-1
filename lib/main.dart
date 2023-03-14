@@ -16,6 +16,7 @@ class App extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
                 height: 40,
@@ -47,11 +48,13 @@ class App extends StatelessWidget {
               const SizedBox(
                 height: 60,
               ),
-              Text(
-                "Total Balance",
-                style: TextStyle(
-                  color: Colors.white.withOpacity(0.8),
-                  fontSize: 22,
+              Container(
+                child: Text(
+                  "Total Balance",
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.8),
+                    fontSize: 22,
+                  ),
                 ),
               ),
               const SizedBox(
