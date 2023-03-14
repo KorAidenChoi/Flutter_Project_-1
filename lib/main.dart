@@ -16,7 +16,6 @@ class App extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
                 height: 40,
@@ -40,7 +39,7 @@ class App extends StatelessWidget {
                           color: Colors.white.withOpacity(0.8),
                           fontSize: 22,
                         ),
-                      ),
+                      )
                     ],
                   )
                 ],
